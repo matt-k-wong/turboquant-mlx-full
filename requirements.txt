@@ -1,0 +1,14 @@
+# Core
+mlx>=0.20.0
+mlx-lm>=0.17.0
+numpy>=1.26.0
+safetensors>=0.4.0
+
+# Optional but recommended
+scipy>=1.11.0       # exact Lloyd-Max levels (better quantisation accuracy)
+torch>=2.1.0        # needed by safetensors save during offline weight quantisation
+
+# Dev
+pytest>=8.0
+pytest-xdist
+ruff

@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*.so
+build/ dist/ *.egg-info/ .eggs/
+.env .venv env/ venv/
+.pytest_cache/ .mypy_cache/ .ruff_cache/
+.DS_Store .AppleDouble ._* .Spotlight-V100 .Trashes .fseventsd
+*.safetensors *.bin *.pt *.pth *.gguf *.ggml
+models/ tq_models/ mlx_model/
+.ipynb_checkpoints *.ipynb
+.idea/ .vscode/
+*.log

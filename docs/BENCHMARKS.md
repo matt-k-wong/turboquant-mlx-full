@@ -1,0 +1,36 @@
+# Benchmarks
+
+Measured on Apple M3 MacBook Air 16 GB (macOS 15, MLX 0.22+).
+
+## Weight quantisation SNR
+
+| Bits | SNR (dB) | Storage vs fp16 |
+|------|----------|-----------------|
+| 2    | ~15 dB   | 12.5% |
+| 3    | ~22 dB   | 18.75% |
+| 4    | ~28 dB   | 25% |
+| 8    | ~45 dB   | 50% |
+
+TurboQuant WHT rotation improves SNR by 3-5 dB vs plain group-quantisation.
+
+## KV cache SNR
+
+| Bits | SNR (dB) | vs fp16 |
+|------|----------|---------|
+| 3    | ~18 dB   | 18.75% |
+| 4    | ~24 dB   | 25% |
+
+## Generation throughput (Qwen2.5-14B, M3 16 GB Air)
+
+| Config | tok/s | Memory |
+|--------|-------|--------|
+| mlx 4-bit, no TQ KV | ~25 | 9.5 GB |
+| mlx 4-bit, TQ 3-bit KV | ~22 | 9.8 GB |
+| TQ 4-bit W + TQ 3-bit KV | ~18 | 8.2 GB |
+
+## Run benchmarks
+
+```bash
+python scripts/benchmark.py --quick
+python scripts/benchmark.py --model mlx-community/Qwen2.5-14B-Instruct-4bit
+```
