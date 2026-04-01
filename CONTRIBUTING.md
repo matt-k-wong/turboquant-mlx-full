@@ -3,7 +3,7 @@
 ## Setup
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/turboquant-mlx-full
+git clone https://github.com/matt-k-wong/turboquant-mlx-full
 cd turboquant-mlx-full
 pip install -e ".[dev]"
 pytest

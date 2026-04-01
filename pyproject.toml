@@ -29,9 +29,9 @@ dev  = ["pytest>=8.0", "pytest-xdist", "scipy", "ruff"]
 full = ["scipy", "torch>=2.1.0"]
 
 [project.urls]
-Homepage   = "https://github.com/YOUR_USERNAME/turboquant-mlx-full"
-Repository = "https://github.com/YOUR_USERNAME/turboquant-mlx-full"
-Issues     = "https://github.com/YOUR_USERNAME/turboquant-mlx-full/issues"
+Homepage   = "https://github.com/matt-k-wong/turboquant-mlx-full"
+Repository = "https://github.com/matt-k-wong/turboquant-mlx-full"
+Issues     = "https://github.com/matt-k-wong/turboquant-mlx-full/issues"
 
 [tool.hatch.build.targets.wheel]
 packages = ["turboquant_mlx_full"]

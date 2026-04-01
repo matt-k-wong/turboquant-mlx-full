@@ -6,7 +6,7 @@
 
 Run Qwen2.5-32B on a 16 GB MacBook Air.
 
-[![CI](https://github.com/YOUR_USERNAME/turboquant-mlx-full/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR_USERNAME/turboquant-mlx-full/actions/workflows/ci.yml)
+[![CI](https://github.com/matt-k-wong/turboquant-mlx-full/actions/workflows/ci.yml/badge.svg)](https://github.com/matt-k-wong/turboquant-mlx-full/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://python.org)
 [![MLX](https://img.shields.io/badge/MLX-Apple%20Silicon-lightgrey.svg)](https://github.com/ml-explore/mlx)
@@ -75,7 +75,7 @@ print_memory_usage()
 ## Installation
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/turboquant-mlx-full
+git clone https://github.com/matt-k-wong/turboquant-mlx-full
 cd turboquant-mlx-full
 pip install -e ".[dev]"
 
@@ -111,7 +111,7 @@ python scripts/benchmark.py --quick
 | 4-bit weight SNR | ~28 dB |
 | 3-bit KV cache SNR | ~18 dB |
 | Hadamard kurtosis reduction | 3.0 → 0.2 |
-| 14B generation (TQ KV) | ~22 tok/s (M3 Air) |
+| 14B generation (TQ KV) | ~10.8 tok/s (M4 16GB) |
 | Memory saving vs mlx 4-bit | ~1-4 GB depending on model |
 
 ---

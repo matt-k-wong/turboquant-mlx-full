@@ -95,10 +95,18 @@ def tq_generate(
     else:
         formatted = prompt
 
-    kwargs: Dict[str, Any] = {
-        "max_tokens": max_tokens, "temp": temperature,
-        "top_p": top_p, "repetition_penalty": repetition_penalty,
-    }
+    try:
+        from mlx_lm.sample_utils import make_sampler, make_logits_processors
+        kwargs: Dict[str, Any] = {
+            "max_tokens": max_tokens,
+            "sampler": make_sampler(temp=temperature, top_p=top_p),
+            "logits_processors": make_logits_processors(repetition_penalty=repetition_penalty),
+        }
+    except ImportError:
+        kwargs: Dict[str, Any] = {
+            "max_tokens": max_tokens, "temp": temperature,
+            "top_p": top_p, "repetition_penalty": repetition_penalty,
+        }
     t0 = time.perf_counter()
 
     if cache is not None:
@@ -145,7 +153,14 @@ def stream_tq_generate(
     else:
         formatted = prompt
 
-    kwargs: Dict[str, Any] = {"max_tokens": max_tokens, "temp": temperature}
+    try:
+        from mlx_lm.sample_utils import make_sampler
+        kwargs: Dict[str, Any] = {
+            "max_tokens": max_tokens,
+            "sampler": make_sampler(temp=temperature),
+        }
+    except ImportError:
+        kwargs: Dict[str, Any] = {"max_tokens": max_tokens, "temp": temperature}
     if cache is not None:
         try:
             yield from stream_generate(model, tokenizer, formatted, prompt_cache=cache, **kwargs)
