@@ -6,7 +6,6 @@
 
 Run Qwen2.5-32B on a 16 GB MacBook Air.
 
-[![CI](https://github.com/matt-k-wong/turboquant-mlx-full/actions/workflows/ci.yml/badge.svg)](https://github.com/matt-k-wong/turboquant-mlx-full/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://python.org)
 [![MLX](https://img.shields.io/badge/MLX-Apple%20Silicon-lightgrey.svg)](https://github.com/ml-explore/mlx)
