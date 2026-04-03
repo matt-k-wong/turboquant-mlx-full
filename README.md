@@ -111,6 +111,7 @@ python scripts/benchmark.py --quick
 | 3-bit KV cache SNR | ~18 dB |
 | Hadamard kurtosis reduction | 3.0 → 0.2 |
 | 14B generation (TQ KV) | ~10.8 tok/s (M4 16GB) |
+| 9B Qwen3.5 generation (TQ KV) | ~15.4 tok/s (M4 16GB) |
 | Memory saving vs mlx 4-bit | ~1-4 GB depending on model |
 
 ---
@@ -122,7 +123,7 @@ python scripts/benchmark.py --quick
 | Qwen2.5-7B/14B/32B-Instruct | ✓ Tested |
 | Qwen2.5-27B-Instruct | ✓ Expected (same arch) |
 | Qwen2.5-Coder-* | ✓ Expected |
-| Qwen3-* | ⚠ Untested |
+| Qwen3-* | ✓ Tested |
 | LLaMA 3.x / Mistral | ⚠ Untested |
 
 ---
@@ -133,7 +134,6 @@ python scripts/benchmark.py --quick
 - [ ] 2-bit weights with 2+2 residual mode
 - [ ] Persistent disk-backed KV cache for very long contexts
 - [ ] Automated perplexity benchmarks (WikiText-2, C4)
-- [ ] Qwen3 / Qwen3-MoE support
 
 ---
 

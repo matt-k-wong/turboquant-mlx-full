@@ -20,11 +20,12 @@ TurboQuant WHT rotation improves SNR by 3-5 dB vs plain group-quantisation.
 | 3    | ~18 dB   | 18.75% |
 | 4    | ~24 dB   | 25% |
 
-## Generation throughput (Qwen2.5-14B, M4 16 GB)
+## Generation throughput (M4 16 GB)
 
-| Config | tok/s | Memory |
-|--------|-------|--------|
-| mlx 4-bit, TQ 3-bit KV | ~10.8 | 13.3 GB |
+| Model | Config | tok/s | Memory |
+|-------|--------|-------|--------|
+| Qwen2.5-14B | mlx 4-bit, TQ 3-bit KV | ~10.8 | 13.3 GB |
+| Qwen3.5-9B | mlx 4-bit, TQ 3-bit KV | ~15.4 | 10.2 GB |
 
 ## Run benchmarks
 
